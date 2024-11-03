@@ -1,0 +1,117 @@
+/* Ensure the body takes full height and uses Flexbox */
+body {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    background-color: #c8ca96; /* Optional: Set a background color */
+}
+
+.container {
+    width: 100%; /* Adjust width to 95% of the viewport */
+    max-width: 2000px; /* Increase max-width to 1000px */
+    height: 90vh; /* Increase height to 90% of the viewport */
+    width:100vh;
+    overflow: hidden; /* Hide any overflow outside the container */
+    padding: 10px; /* Padding around content */
+    border-radius: 12px; /* Slight rounding of corners */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    text-align: center;
+    background-image: url("/Users/prekshakreddy/Desktop/todolist/src/leaf.jpg"); /* Use relative path for image */
+    background-size: cover; /* Scale image to cover container */
+    background-position: center; /* Center the image */
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 32px; /* Increase font size */
+    margin-bottom: 20px; /* Keep some bottom margin */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Input and Button styling */
+input, button {
+    margin: 10px 0; /* Slightly reduce margin */
+    padding: 12px 16px; /* Adjust padding */
+    width: 100%; /* Full width */
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 18px; /* Reduce font size */
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e39946; /* Button background color */
+    color: white; /* Button text color */
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px; /* Keep button font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:disabled {
+    background-color: #ccc; /* Greyed-out button */
+    cursor: not-allowed; /* Show not-allowed cursor */
+}
+
+/* To-Do list styling */
+ul {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* Remove padding */
+    margin-top: 20px;
+    flex: 1; /* Allow the list to grow and take available space */
+    overflow-y: auto; /* Enable scrolling within the list */
+    max-height: 70vh; /* Constrain the list to a maximum height */
+}
+
+li {
+    background-color: rgba(245, 245, 245, 0.9);
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px; /* Increase font size */
+    color: #333;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Make buttons stack vertically */
+    align-items: flex-start; /* Align items to the start for a left-aligned look */
+}
+
+li:hover {
+    background-color: rgba(224, 247, 250, 0.9); /* Change color on hover */
+}
+
+li.completed {
+    text-decoration: line-through; /* Strike-through for completed items */
+    color: #ff0000; /* Red color for completed items */
+    background-color: rgba(255, 238, 238, 0.9); /* Light red background */
+}
+
+/* Button styling for each to-do item */
+li button {
+    margin-top: 5px; /* Add a small margin on top to separate buttons */
+    width: 100%; /* Make buttons take full width for consistency */
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+/* Additional paragraph styling */
+p {
+    margin-top: 20px; /* Reduce top margin */
+    font-weight: bold;
+    font-size: 20px; /* Keep font size */
+    color: #fff8f8; /* Text color */
+}
